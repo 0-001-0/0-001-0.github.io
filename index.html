@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>用户登录</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            html,body{
+                height: 100%;
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: url("images/background.jpg");
+            }
+            .login{
+                width: 300px;
+                height: 300px;
+                background-color: #ebf0f1;
+                border-radius: 10px 10px 0 0;
+            }
+            .login-head:before{
+                content: '';/* 激活伪元素必要因素 */
+                display: block;
+                width: 100%;
+                height: 10px;
+                background-image: -webkit-linear-gradient(left,#27ae60 0%,#27ae60 20%,#8e44ad 20%,#8e44ad 40%,#3498d8 40%,#3498d8 60%,#e74c3c80 60%,#e74c3c80 80%,#f1c40f 80%,#f1c40f 100%);
+                border-radius: 10px 10px 0 0;
+            }
+            .title{
+                line-height: 80px;
+                text-align: center;
+                color: #096;
+                font-size: 2em;
+            }
+            .login-content{
+                display: flex;flex-direction: column;/* 改变弹性盒方向 */
+                justify-content: space-around;/* 等比环绕 */
+                align-items: center;/* 水平居中 */
+                height: 200px;
+            }
+            .fm-div{
+                width: 90%;
+            }
+            #fm-pre-password,#fm-pre-icon{
+                float: center;
+            }
+            .login-content input{
+                width: 85%;
+                height: 40px;
+                border: 1px solid #bbb;
+                border-radius: 10px;/* 圆角 */
+                outline: none;/* 清除input默认样式 */
+            }
+            .login-content input[type="text"]{
+                text-indent: 1.2em;/* 行缩进 */
+            }
+            .login-content input[type="password"/* 属性选择器 */]{
+                text-indent: 1.2em;/* 行缩进 */
+            }
+            .login-content input[type="submit"]{
+                width: 80%;
+                
+                color: rgb(170, 147, 147);
+            }
+            .bottom{
+                border-radius: 10px;
+                background-color: #ebf0f1;
+            }
+            .ret-account{
+                text-decoration: none;
+                margin-left: 2em;
+                color: #2ac203;
+            }
+            .forget-password{
+                text-decoration: none;
+                float: right;
+                margin-right: 2em;
+                color: #000000;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login">
+            <div class="login-head">
+                <h2 class="title">登录</h2>
+                <form action="//api.0-001.cn/login.php" method="POST" class="login-content">
+                    <div class="fm-div">
+                        <img id="fm-pre-icon" src="./images/icon_account.png" />
+                        <input type="text" name="username" placeholder="请输入用户名">
+                    </div>
+                    <div class="fm-div">
+                        <img id="fm-pre-password" src="./images/icon_password.png" />
+                        <input type="password" name="pwd" placeholder="请输入密码">
+                    </div>
+                    <input type="submit" value="登录" id="login_btn" name="submit">
+                </form>
+                <div class="bottom">
+                    <a class="ret-account" heaf="https://www.0-001.cn/passport/register.html" target="_blank">注册账号</a>
+                    <a class="forget-password" href="https://www.0-001.cn/passport/forget-pwd.html" target="_blank">忘记密码</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
