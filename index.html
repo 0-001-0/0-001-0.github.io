@@ -1,109 +1,94 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>用户登录</title>
+        <meta charset="utf-8" />
         <style>
-            *{
-                margin: 0;
-                padding: 0;
-            }
-            html,body{
-                height: 100%;
-            }
             body{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: url("images/background.jpg");
+                margin: 0;
             }
-            .login{
-                width: 300px;
-                height: 300px;
-                background-color: #ebf0f1;
-                border-radius: 10px 10px 0 0;
+            .menu_box{
+                height: 180px;
+                width: auto;
+                background: url("/images/background_main_meun.png");
             }
-            .login-head:before{
-                content: '';/* 激活伪元素必要因素 */
-                display: block;
-                width: 100%;
-                height: 10px;
-                background-image: -webkit-linear-gradient(left,#27ae60 0%,#27ae60 20%,#8e44ad 20%,#8e44ad 40%,#3498d8 40%,#3498d8 60%,#e74c3c80 60%,#e74c3c80 80%,#f1c40f 80%,#f1c40f 100%);
-                border-radius: 10px 10px 0 0;
+            .menu {
+                display: flex;/* 弹性盒模型 */
+                justify-content: center;/* 水平居中 */
+                height: 3em;
+                width: auto;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                filter:alpha(Opacity=60);-moz-opacity:0.6;opacity: 0.6;
+                background-color: #fff;
             }
-            .title{
-                line-height: 80px;
-                text-align: center;
-                color: #096;
-                font-size: 2em;
+            .menu-l {
+                display: flex;/* 弹性盒模型 */
+                justify-content: center;/* 水平居中 */
+                position: relative;
+                margin: 0 auto;
+                top: 0.25em;
+                height: 2.5em;
+                width: auto;
+                background-color: blue;
             }
-            .login-content{
-                display: flex;flex-direction: column;/* 改变弹性盒方向 */
-                justify-content: space-around;/* 等比环绕 */
-                align-items: center;/* 水平居中 */
-                height: 200px;
+            .menu-r {
+                display: flex;/* 弹性盒模型 */
+                justify-content: center;/* 水平居中 */
+                position: relative;
+                margin: 0 auto;
+                top: 0.25em;
+                height: 2.5em;
+                width: auto;
+                background-color: rgba(228, 3, 248, 0.5);
             }
-            .fm-div{
-                width: 90%;
+            .body_main {
+                text-align:center;
+                height: auto;
+                width: auto;
+                background-color: rgb(233, 233, 233);
             }
-            #fm-pre-password,#fm-pre-icon{
-                float: center;
+            .video_box{
+                text-align:center
             }
-            .login-content input{
-                width: 85%;
-                height: 40px;
-                border: 1px solid #bbb;
-                border-radius: 10px;/* 圆角 */
-                outline: none;/* 清除input默认样式 */
+            .video-box {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 800px;
+                height: 450px;
+                margin-left: -300px;
+                margin-top: -225px;
             }
-            .login-content input[type="text"]{
-                text-indent: 1.2em;/* 行缩进 */
-            }
-            .login-content input[type="password"/* 属性选择器 */]{
-                text-indent: 1.2em;/* 行缩进 */
-            }
-            .login-content input[type="submit"]{
-                width: 80%;
-                
-                color: rgb(170, 147, 147);
-            }
-            .bottom{
-                border-radius: 10px;
-                background-color: #ebf0f1;
-            }
-            .ret-account{
-                text-decoration: none;
-                margin-left: 2em;
-                color: #2ac203;
-            }
-            .forget-password{
-                text-decoration: none;
+            .video-box .video-control {
                 float: right;
-                margin-right: 2em;
-                color: #000000;
+                width: 100px;
+                height: 450px;
+            }
+            .test{
+                text-align:center;
             }
         </style>
     </head>
     <body>
-        <div class="login">
-            <div class="login-head">
-                <h2 class="title">登录</h2>
-                <form action="//api.0-001.cn/login.php" method="POST" class="login-content">
-                    <div class="fm-div">
-                        <img id="fm-pre-icon" src="./images/icon_account.png" />
-                        <input type="text" name="username" placeholder="请输入用户名">
-                    </div>
-                    <div class="fm-div">
-                        <img id="fm-pre-password" src="./images/icon_password.png" />
-                        <input type="password" name="pwd" placeholder="请输入密码">
-                    </div>
-                    <input type="submit" value="登录" id="login_btn" name="submit">
-                </form>
-                <div class="bottom">
-                    <a class="ret-account" heaf="https://www.0-001.cn/passport/register.html" target="_blank">注册账号</a>
-                    <a class="forget-password" href="https://www.0-001.cn/passport/forget-pwd.html" target="_blank">忘记密码</a>
+        <div class="menu_box">
+            <div class="menu">
+                <div class="menu-l">
+                    <p>holle</p>
+                    <p>123</p>
+                </div>
+                <div class="menu-r">
+                    <p>word</p>
+                    <p>123</p>
+                    <p>123456</p>
+                    <p>147852</p>
                 </div>
             </div>
         </div>
+        <div class="body_main">
+           <div class="">
+               <img class="" src="/images/background_main_body.jpg"/>
+           </div>
+        </div>
+        <div><h1 class="test">测试网页</h1></div>
     </body>
 </html>
