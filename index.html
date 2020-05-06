@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>某宅的小站</title>  
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />  
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <meta charset="utf-8" />
         <style>
             body{
@@ -12,7 +9,7 @@
             .menu_box{
                 height: 180px;
                 width: auto;
-                background:url("background_main_menu.png") no-repeat center;
+                background:url("background_main_menu.png")
             }
             .menu {
                 display: flex;/* 弹性盒模型 */
@@ -68,7 +65,31 @@
                 height: 450px;
             }
             .test{
-                text-align:center;
+                text-align: center;
+                color: #ff8888;
+            }
+            .main_box {
+                height: 24em;
+                width: 49em;
+                margin:0 auto;
+                /*background:url("")*/
+                background-color: #78d8df;
+            }
+            .sbox {
+                display:inline-block;
+                margin: 2% 2%;
+                height: 160px;
+                width: 160px;
+                background-color: #ff8888;
+            }
+            .sbox_p{
+                height: 80px;
+                width: 160px;
+                margin-top: 80px;
+                display: none;
+            }
+            .sbox:hover .sbox_p{
+                display:inline-block;
             }
         </style>
     </head>
@@ -76,7 +97,10 @@
         <div class="menu_box">
             <div class="menu">
                 <div class="menu-l">
-                    <p>holle</p>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
                     <p>123</p>
                 </div>
                 <div class="menu-r">
@@ -93,5 +117,35 @@
            </div>
         </div>
         <div><h1 class="test">测试网页</h1></div>
+        <div class="main_box">
+            <div class="box">
+                <div class="sbox" style="background: url(/images/j_0014.gif)">
+                    <div class="sbox_p"><p>1</p></div>
+                </div>
+                <div class="sbox" style="background: url(/images/j_0003.gif)">
+                    <div class="sbox_p"><p>1</p></div>
+                </div>
+                <div class="sbox" style="background: url(/images/t_0024.gif)">
+                    <div class="sbox_p"><p>1</p></div>
+                </div>
+                <div class="sbox" style="background: url(/images/timg.jpg)">
+                    <div class="sbox_p"><p>1</p></div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="sbox" style="background: url(/images/ploading.gif) no-repeat center;">
+                    <div class="sbox_p"><p>1</p></div>
+                </div>
+                <div class="sbox" style="background: url(/images/Splash.png)">
+                    <div class="sbox_p"><p>1</p></div>
+                </div>
+                <div class="sbox" style="background: url(/images/0002.png)">
+                    <div class="sbox_p"><p>1</p></div>
+                </div>
+                <div class="sbox" style="background: url(/images/j_0014.gif)">
+                    <div class="sbox_p"><p>1</p></div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
